@@ -21,7 +21,7 @@ Attempt cold (≤ 40 min each): `eventual_safe_states`, `reconstruct_itinerary`.
 - [ ] `reconstruct_itinerary` · Hard · `./dsa test 22/reconstruct_itinerary`
 - [ ] `alien_dictionary` · Hard · `./dsa test 22/alien_dictionary` (a premium problem, written here in original words)
 
-## CLRS quick reference (≈80 min, all optional)
+## CLRS quick reference (≈90 min, all optional)
 A* is not in CLRS. Strongly connected components, max flow and matching have no exercises here; they are review reading only.
 
 | When | Read (3e / 4e) | What to read | Skip if |
