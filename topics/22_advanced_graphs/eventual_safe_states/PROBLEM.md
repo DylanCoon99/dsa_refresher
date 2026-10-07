@@ -13,7 +13,7 @@
 ## Constraints
 - 0 ≤ n ≤ 10⁴ vertices, total edges ≤ 4·10⁴ (limits chosen for this exercise; the tests stay inside them).
 - Self-loops are allowed; there are no repeated edges.
-- The reference uses recursive DFS (the largest test has DFS depth about 5·10³); production code would use an explicit stack or Kahn's algorithm.
+- The reference uses recursive DFS (the largest test has DFS depth about 2.5·10³); production code would use an explicit stack or Kahn's algorithm.
 
 ## Target
 Time: O(V + E) · Space: O(V)
