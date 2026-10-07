@@ -140,12 +140,13 @@ TEST_CASE("randomized vs std::set") {
 }
 
 TEST_CASE("large input" * doctest::timeout(2.0)) {
-    // 10^5 random words of length 20 over {a,b}, then 10^5 queries (each asked as both search and
-    // startsWith). A linear scan over the words would be about 10^10 character comparisons.
+    // 3*10^4 random words of length 20 over {a,b}, then 3*10^4 queries (each asked as both search and
+    // startsWith). A linear scan over the words is about 2*10^9 string comparisons (it times out in
+    // Debug+ASan). Sized so that a std::map-children trie also finishes well inside the limit.
     // Expected answers do not use the trie: a word is a 20-bit number, and a prefix of length k with
     // bits x is the heap-style code (1 << k) | x. Tables over those codes say which strings are
     // words and which are prefixes of some word.
-    const int n = 100'000, len = 20;
+    const int n = 30'000, len = 20;
     auto to_string = [&](unsigned bits, int k) {  // the first k letters of a 20-bit word
         std::string s(static_cast<std::size_t>(k), 'a');
         for (int i = 0; i < k; ++i)
