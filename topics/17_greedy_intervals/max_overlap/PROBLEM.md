@@ -39,3 +39,4 @@ The large test makes counting the active intervals at every start point (O(n²))
 <details><summary>Hint 1</summary>Only the moments when an interval starts or ends can change the count. How can you list those moments in order?</details>
 <details><summary>Hint 2</summary>If one interval ends at time 3 and another starts at time 3, should the count briefly be 2 or not? Which event must come first?</details>
 <details><summary>Hint 3</summary>An alternative to events is a min-heap of end times; either works, but this exercise asks for the sweep line.</details>
+<details><summary>Hint 4</summary>Before coding, write one sentence on why the greedy choice is safe (the exchange argument).</details>

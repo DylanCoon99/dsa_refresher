@@ -1,7 +1,7 @@
 # 18 · Bit Manipulation and Mathematics
 Run everything: `./dsa test 18` · Status: `./dsa list 18`
 
-Overflow is part of this topic. Two exercises are built to catch it: `pow_x_n` (negating `INT_MIN` is undefined behavior, and the sanitizer reports it as CRASH) and `sum_two_integers` (shift carries in `unsigned`). A correct, standard solution never trips the sanitizer.
+Overflow is part of this topic. `pow_x_n`'s tests catch negating `INT_MIN` (undefined behavior, which the sanitizer reports as CRASH); `sum_two_integers` only documents the habit of shifting carries in `unsigned`. A correct, standard solution never trips the sanitizer.
 
 ## Diagnostic
 Attempt cold (≤ 40 min each): `counting_bits`, `sum_two_integers`. Both comfortable → skim Review, do Implement, go to Mastery.

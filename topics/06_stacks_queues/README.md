@@ -26,7 +26,7 @@ Attempt cold (≤ 40 min each): `daily_temperatures`, `eval_rpn`. Both comfortab
 ## CLRS quick reference (≈25 min, all optional)
 | When | Read (3e / 4e) | What to read | Skip if |
 |---|---|---|---|
-| Stack and queue basics | §10.1 (3e) / §10.1 (4e), "Stacks and queues" | STACK and ENQUEUE/DEQUEUE pseudocode (≈10 min) | You can implement both on an array and explain overflow and underflow. |
+| Stack and queue basics | §10.1 (3e) / §10.1 (4e), "Stacks and queues" / "Simple array-based data structures: arrays, matrices, stacks, queues" | STACK and ENQUEUE/DEQUEUE pseudocode (≈10 min) | You can implement both on an array and explain overflow and underflow. |
 | Before `queue_two_stacks` | §17.1 (3e) / §16.1 (4e), "Aggregate analysis" | The stack-operations example (≈15 min) | You can explain why each element is moved at most twice, so n operations cost O(n). |
 
 Monotonic stacks are not in CLRS. Use the PROBLEM.md hints, or a problem editorial for "next greater element".

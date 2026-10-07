@@ -39,7 +39,7 @@ TEST_CASE("edge cases") {
         CHECK(jump({10, 0, 0}) == 1);
     }
     SUBCASE("all ones need n - 1 jumps") { CHECK(jump({1, 1, 1, 1, 1}) == 4); }
-    SUBCASE("the farthest first jump is not always best") {
+    SUBCASE("a later index with a big value is the better launch") {
         // From 0 you can land on index 1 (value 1) or index 2 (value 10): index 2 is the better launch.
         CHECK(jump({2, 1, 10, 0, 0, 0, 0, 0, 0, 0, 0}) == 2);
     }

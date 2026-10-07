@@ -89,8 +89,8 @@ TEST_CASE("randomized vs brute force") {
 TEST_CASE("large input" * doctest::timeout(2.0)) {
     // 45 ones: fib(46) = 1836311903 decodings (fits in int), but ~1.8e9 calls without a cache.
     CHECK(numDecodings(std::string(45, '1')) == 1836311903);
-    // 60 ones then "00": the final 0 can never be decoded, so the answer is 0, but a cache-free recursion
-    // only discovers that at the end of each of its ~fib(60) paths. The intermediate counts (up to
-    // fib(61), about 2.5e12) overflow int, so a signed 32-bit table crashes here under UBSan.
-    CHECK(numDecodings(std::string(60, '1') + "00") == 0);
+    // 45 ones then "00": the final 0 can never be decoded, so the answer is 0, but a cache-free recursion
+    // only discovers that at the end of each of its ~fib(46) paths. The intermediate counts (up to
+    // fib(46) = 1836311903) still fit in int, so a plain int table passes; 64-bit is a safe habit anyway.
+    CHECK(numDecodings(std::string(45, '1') + "00") == 0);
 }

@@ -17,7 +17,7 @@ Beware: `-n` overflows `int` when `n == INT_MIN`. Widen to `long long` before ne
 - `n` is any `int`, including `INT_MIN` and `INT_MAX`
 - When `n < 0`, `x ≠ 0`
 - Tests only use inputs whose exact result is representable as a finite `double` or underflows to `0.0`
-  (the tests compare against `std::pow` with 1e-9 relative error only for |n| ≤ 10⁵; for larger |n|
+  (the tests compare against `std::pow` with 1e-9 relative error only for |n| ≤ 10³; for larger |n|
   they use bases such as ±1 where the answer is exact, or a looser tolerance, because repeated
   squaring accumulates rounding error)
 

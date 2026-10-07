@@ -208,6 +208,7 @@ cmd_reset() {
   mkdir -p "$dir"
   cp "$hdr" "$dir/$(date +%Y%m%d-%H%M%S).hpp"
   cp "$starter" "$hdr"
+  touch "$hdr"  # fresh mtime so make always rebuilds (same-second reset after a build left a stale binary)
   echo "Saved attempt to .attempts/${t}_${ex}/ and restored the stub for $t/$ex."
 }
 

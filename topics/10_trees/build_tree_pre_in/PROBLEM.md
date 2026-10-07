@@ -21,7 +21,7 @@ tree. Empty vectors give `nullptr`. The tests compare the rebuilt tree with the 
 
 ## Target
 Time: O(n) with a value → inorder-index lookup · Space: O(n)
-Copying a fresh sub-vector at every level, or searching the inorder range linearly for each root, costs about O(n log n) on a balanced tree and still passes the large test. What the test does reject is quadratic behavior on balanced input, such as scanning the whole inorder vector from the start for every node.
+Copying a fresh sub-vector at every level, or searching the inorder range linearly for each root, costs about O(n log n) on a balanced tree and still passes the large test. The large test rejects a hand-written O(n²) scan, but it does not reliably separate a vectorised `std::find` scan from the target; the hash-map index is the target.
 
 ## Hints
 <details><summary>Hint 1</summary>Which element of the preorder is always the root of the current (sub)tree? Once you know the root, what does its position in the inorder tell you about the left subtree?</details>

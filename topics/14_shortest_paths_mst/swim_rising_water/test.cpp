@@ -75,7 +75,7 @@ TEST_CASE("the end is the highest cell") {
 }
 
 TEST_CASE("a detour beats a high direct route") {
-    // The direct way down the middle passes 8; the route around the edge peaks at 5.
+    // The direct way down the middle passes 8; the route around the edge peaks at 4.
     Grid g{{0, 1, 2}, {8, 7, 3}, {6, 5, 4}};
     CHECK(swimInWater(g) == 4);
     Grid h{{0, 8, 5}, {1, 7, 4}, {2, 3, 6}};

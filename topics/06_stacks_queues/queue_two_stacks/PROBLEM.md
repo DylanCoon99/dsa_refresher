@@ -27,7 +27,7 @@ Every operation must be **amortized O(1)**: any sequence of n operations costs O
 Time: O(1) amortized per operation · Space: O(n)
 
 ## CLRS (optional, ≈20 min)
-- §10.1 (3e) / §10.1 (4e), "Stacks and queues": read the STACK and ENQUEUE/DEQUEUE pseudocode (≈10 min). An end-of-section exercise asks for exactly this design.
+- §10.1 (3e) / §10.1 (4e), "Stacks and queues" / "Simple array-based data structures: arrays, matrices, stacks, queues": read the STACK and ENQUEUE/DEQUEUE pseudocode (≈10 min). An end-of-section exercise asks for exactly this design.
 - §17.1 (3e) / §16.1 (4e), "Aggregate analysis": read the stack-operations example for the amortized argument (≈10 min).
 - Skip if: you can explain why each element is moved at most twice.
 

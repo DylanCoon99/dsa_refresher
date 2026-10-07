@@ -22,7 +22,7 @@ Return `0` if no valid cutting exists.
 
 ## Constraints
 - 1 ≤ s.size() ≤ 100 and s contains only the digits `0`–`9`.
-- The final answer is guaranteed to fit in a 32-bit `int` (so a string such as 100 ones is not a valid input). Intermediate counts need not: for 60 ones followed by `"00"` they exceed `int` before the last `0` turns the answer into 0.
+- The final answer is guaranteed to fit in a 32-bit `int` (so a string such as 100 ones is not a valid input). Intermediate counts can be larger than the final answer: for 45 ones followed by `"00"` they reach 1836311903 before the last `0` turns the answer into 0. That still fits in `int`, so `int` suffices for the tests.
 - These limits are chosen for this exercise; they cover every test input.
 
 ## Target
@@ -34,4 +34,4 @@ so that version takes exponentially long.
 ## Hints
 <details><summary>Hint 1</summary>Let <code>ways[i]</code> be the number of ways to decode the first <code>i</code> characters. The last piece is either one digit or two digits. When is each one valid?</details>
 <details><summary>Hint 2</summary>A <code>'0'</code> can only be the second digit of <code>"10"</code> or <code>"20"</code>. What should each of the two transitions contribute when the digits don't form a valid piece?</details>
-<details><summary>Hint 3</summary>Because intermediate counts can exceed <code>int</code> even when the answer fits, keep the table or rolling values in <code>unsigned long long</code>: its wraparound is defined, and the result is exact whenever the true answer fits in 32 bits. A signed <code>int</code> overflows on the large test, which the sanitizer build reports as a crash.</details>
+<details><summary>Hint 3</summary>Intermediate counts can be larger than the final answer. <code>int</code> intermediates suffice for the tests here, but using 64-bit values (for example <code>unsigned long long</code>, whose wraparound is defined) is a safe habit when the answer is small yet the intermediates are not.</details>

@@ -50,7 +50,7 @@ TEST_CASE("edge cases") {
         const long long M = 2'000'000'000;
         CHECK(modPow(M - 1, 2, M) == 1);
         CHECK(modPow(M - 1, 3, M) == M - 1);
-        CHECK(modPow(-1, 1'000'000'000'000'000'001LL, M) == M - 1);
+        CHECK(modPow(-1, 999'999'999'999'999'999LL, M) == M - 1);
     }
     SUBCASE("Fermat: a^(p-1) == 1 for prime p = 1e9+7") {
         for (long long a : {2LL, 3LL, 10LL, 123456789LL, P - 1, P + 2, -5LL}) {
