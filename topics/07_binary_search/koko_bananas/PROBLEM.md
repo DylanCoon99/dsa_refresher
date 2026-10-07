@@ -19,11 +19,11 @@ Return the **smallest** `k` such that she can finish every pile within `h` hours
 - 1 ≤ n ≤ 10⁴
 - 1 ≤ piles[i] ≤ 10⁹
 - n ≤ h ≤ 10⁹
-- The total hours for a given speed can reach about 10¹³, which does not fit in a 32-bit `int`.
+- Evaluating a small speed such as 1 on these inputs gives an hour total up to about 10¹³, which does not fit in a 32-bit `int`. Use a 64-bit accumulator; the tests do not force that probe, so it is a habit rather than something they check.
 
 ## Target
 Time: O(n · log(max pile)) · Space: O(1)
 
 ## Hints
 <details><summary>Hint 1</summary>If speed k is fast enough, is every larger speed fast enough too? What does that monotonic yes/no pattern let you do over the range of speeds?</details>
-<details><summary>Hint 2</summary>What are the smallest and largest speeds worth trying? Write a function hours(k) first, and ask what type it must return when k = 1 and the piles are huge.</details>
+<details><summary>Hint 2</summary>What are the smallest and largest speeds worth trying? Write a function hours(k) first, and think about what type it should return if k is small and the piles are huge.</details>

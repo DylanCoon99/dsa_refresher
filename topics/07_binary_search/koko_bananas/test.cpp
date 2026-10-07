@@ -39,8 +39,8 @@ TEST_CASE("edge cases") {
         CHECK(minEatingSpeed({10}, 3) == 4);   // ceil(10/4) = 3, ceil(10/3) = 4
         CHECK(minEatingSpeed({10}, 10) == 1);
     }
-    SUBCASE("hour total at speed 1 overflows int") {
-        // 3 piles of 10^9 at speed 1 need 3·10^9 hours.
+    SUBCASE("huge piles near 10^9") {
+        // Piles of 10^9; at speed 1 the hour total would exceed int, but these tests do not force that probe.
         CHECK(minEatingSpeed({1'000'000'000, 1'000'000'000, 1'000'000'000}, 3) == 1'000'000'000);
         CHECK(minEatingSpeed({1'000'000'000, 1'000'000'000, 1'000'000'000}, 1'000'000'000) == 4);
         CHECK(minEatingSpeed(std::vector<int>(10'000, 1'000'000'000), 1'000'000'000) == 10'000);
