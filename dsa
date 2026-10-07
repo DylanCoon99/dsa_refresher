@@ -1,0 +1,259 @@
+#!/bin/bash
+# dsa: build, run, and manage the C++ DSA exercises. Run `./dsa help` for usage.
+# Must stay compatible with macOS's /bin/bash 3.2 (no associative arrays, no ${x,,}).
+set -u
+
+ROOT="$(cd "$(dirname "$0")" && pwd)"
+BUILD="$ROOT/build"
+STATUS="$BUILD/.status"
+RUN_TIMEOUT="${DSA_RUN_TIMEOUT:-60}"
+CRASH_CODE=86
+export ASAN_OPTIONS="${ASAN_OPTIONS:-detect_leaks=0:exitcode=$CRASH_CODE}"
+export UBSAN_OPTIONS="${UBSAN_OPTIONS:-print_stacktrace=1:halt_on_error=1:exitcode=$CRASH_CODE}"
+LAST_RESULT=""
+
+die() { echo "dsa: $*" >&2; exit 2; }
+
+usage() {
+  cat <<'EOF'
+Usage:
+  ./dsa test <topic>[/<exercise>] [--solution]   build and run tests
+  ./dsa list [topic]                             show exercise status
+  ./dsa reset <topic>/<exercise>                 back up your attempt and restore the stub
+  ./dsa verify [topic] [--starters]              run the tests against the reference solutions
+  ./dsa help
+
+<topic> may be 8, 08, 08_linked_lists, or topics/08_linked_lists.
+Examples:
+  ./dsa test 02/two_sum
+  ./dsa test 8
+  ./dsa test 02/two_sum --solution
+EOF
+}
+
+# "./topics/08_x/ex/" -> "08_x/ex"
+normalize() {
+  local s="${1#./}"
+  s="${s#topics/}"
+  echo "${s%/}"
+}
+
+# Prints the topic folder matching a number or folder name; returns 1 if none match.
+resolve_topic() {
+  local want="$1" d name
+  case "$want" in [0-9]) want="0$want" ;; esac
+  for d in "$ROOT"/topics/*/; do
+    [ -d "$d" ] || continue
+    name="$(basename "$d")"
+    if [ "$name" = "$want" ] || [ "${name%%_*}" = "$want" ]; then echo "$name"; return 0; fi
+  done
+  return 1
+}
+
+all_topics() {
+  local d
+  for d in "$ROOT"/topics/*/; do [ -d "$d" ] && basename "$d"; done
+}
+
+exercises_in() {
+  local f
+  for f in "$ROOT/topics/$1"/*/test.cpp; do [ -e "$f" ] && basename "$(dirname "$f")"; done
+}
+
+header_path()  { echo "$ROOT/topics/$1/$2/$2.hpp"; }
+starter_path() { echo "$ROOT/.starter/$1/$2/$2.hpp"; }
+checksum()     { cksum < "$1" | awk '{print $1 "-" $2}'; }
+
+# Re-runs CMake only when the set of exercises or solutions has changed.
+configure() {
+  local fp
+  mkdir -p "$BUILD"
+  fp="$(cd "$ROOT" && ls -1 topics/*/*/test.cpp solutions/*/*/*.hpp 2>/dev/null | cksum)"
+  if [ -f "$BUILD/CMakeCache.txt" ] && [ "$fp" = "$(cat "$BUILD/.fingerprint" 2>/dev/null)" ]; then
+    return 0
+  fi
+  if ! cmake -S "$ROOT" -B "$BUILD" -DCMAKE_BUILD_TYPE=Debug >"$BUILD/configure.log" 2>&1; then
+    cat "$BUILD/configure.log"
+    die "cmake configure failed"
+  fi
+  echo "$fp" > "$BUILD/.fingerprint"
+}
+
+record_status() { # <topic/ex> <checksum> <RESULT>
+  local state
+  case "$3" in
+    PASS) state=passing ;;
+    FAIL) state=failing ;;
+    *) state="$(echo "$3" | tr '[:upper:]' '[:lower:]')" ;;
+  esac
+  touch "$STATUS"
+  grep -v "^$1 " "$STATUS" > "$STATUS.tmp"
+  echo "$1 $2 $state" >> "$STATUS.tmp"
+  mv "$STATUS.tmp" "$STATUS"
+}
+
+lookup_status() { # <topic/ex> <checksum>
+  if [ ! -f "$STATUS" ]; then echo edited; return; fi
+  awk -v k="$1" -v c="$2" '$1 == k { found = 1; print ($2 == c ? $3 : "edited") }
+                           END { if (!found) print "edited" }' "$STATUS"
+}
+
+# Runs a command, killing it with SIGALRM (exit 142) after RUN_TIMEOUT seconds.
+run_timed() {
+  perl -e 'alarm shift @ARGV; exec @ARGV or die "exec failed: $!\n"' "$RUN_TIMEOUT" "$@"
+}
+
+run_one() { # <topic> <exercise> <ex|sol> <verbose 0|1>; sets LAST_RESULT, returns 0 on PASS
+  local t="$1" ex="$2" mode="$3" verbose="$4"
+  local target="${mode}_${t:0:2}_${ex}"
+  local log="$BUILD/logs/$target.log" code=0 suffix=""
+  [ "$mode" = sol ] && suffix=" (solution)"
+  mkdir -p "$BUILD/logs"
+  if ! cmake --build "$BUILD" --target "$target" >"$log" 2>&1; then
+    LAST_RESULT=BUILD-ERROR
+  else
+    if [ "$verbose" = 1 ]; then
+      run_timed "$BUILD/bin/$target"; code=$?
+    else
+      run_timed "$BUILD/bin/$target" >>"$log" 2>&1; code=$?
+    fi
+    case "$code" in
+      0) LAST_RESULT=PASS ;;
+      1) LAST_RESULT=FAIL ;;
+      142) LAST_RESULT=TIMEOUT ;;
+      *) LAST_RESULT=CRASH ;;
+    esac
+  fi
+  if [ "$verbose" = 1 ]; then
+    case "$LAST_RESULT" in
+      BUILD-ERROR) cat "$log" ;;
+      TIMEOUT) echo "Stopped after ${RUN_TIMEOUT}s: an infinite loop, or an algorithm far slower than the target." ;;
+      CRASH) echo "The test binary crashed (exit $code). Read the sanitizer report above." ;;
+    esac
+    echo
+  fi
+  printf '%-12s %s/%s%s\n' "$LAST_RESULT" "$t" "$ex" "$suffix"
+  if [ "$mode" = ex ]; then
+    record_status "$t/$ex" "$(checksum "$(header_path "$t" "$ex")")" "$LAST_RESULT"
+  fi
+  [ "$LAST_RESULT" = PASS ]
+}
+
+cmd_test() {
+  local spec="" mode=ex arg t ex pass=0 total=0
+  for arg in "$@"; do
+    case "$arg" in
+      --solution) mode=sol ;;
+      -*) die "unknown option: $arg" ;;
+      *) spec="$(normalize "$arg")" ;;
+    esac
+  done
+  [ -n "$spec" ] || die "usage: ./dsa test <topic>[/<exercise>] [--solution]"
+  t="$(resolve_topic "${spec%%/*}")" || die "no topic matching '${spec%%/*}'"
+  configure
+  case "$spec" in
+    */*)
+      ex="${spec#*/}"
+      [ -f "$ROOT/topics/$t/$ex/test.cpp" ] || die "no exercise '$ex' in $t"
+      if [ "$mode" = sol ] && [ ! -f "$ROOT/solutions/$t/$ex/$ex.hpp" ]; then
+        die "no reference solution for $t/$ex"
+      fi
+      run_one "$t" "$ex" "$mode" 1
+      ;;
+    *)
+      for ex in $(exercises_in "$t"); do
+        if [ "$mode" = sol ] && [ ! -f "$ROOT/solutions/$t/$ex/$ex.hpp" ]; then continue; fi
+        total=$((total + 1))
+        run_one "$t" "$ex" "$mode" 0 && pass=$((pass + 1))
+      done
+      [ "$total" -gt 0 ] || die "$t has no code exercises (see its README.md)"
+      echo "$pass/$total passing. Run ./dsa test ${t:0:2}/<exercise> for details."
+      [ "$pass" -eq "$total" ]
+      ;;
+  esac
+}
+
+cmd_list() {
+  local topics t ex hdr state
+  if [ $# -ge 1 ]; then
+    topics="$(resolve_topic "$(normalize "$1")")" || die "no topic matching '$1'"
+  else
+    topics="$(all_topics)"
+  fi
+  for t in $topics; do
+    for ex in $(exercises_in "$t"); do
+      hdr="$(header_path "$t" "$ex")"
+      if cmp -s "$hdr" "$(starter_path "$t" "$ex")"; then
+        state=untouched
+      else
+        state="$(lookup_status "$t/$ex" "$(checksum "$hdr")")"
+      fi
+      printf '%-12s %s/%s\n' "$state" "$t" "$ex"
+    done
+  done
+}
+
+cmd_reset() {
+  [ $# -eq 1 ] || die "usage: ./dsa reset <topic>/<exercise>"
+  local spec t ex hdr starter dir
+  spec="$(normalize "$1")"
+  case "$spec" in */*) ;; *) die "usage: ./dsa reset <topic>/<exercise>" ;; esac
+  t="$(resolve_topic "${spec%%/*}")" || die "no topic matching '${spec%%/*}'"
+  ex="${spec#*/}"
+  hdr="$(header_path "$t" "$ex")"
+  starter="$(starter_path "$t" "$ex")"
+  [ -f "$starter" ] || die "no starter copy for $t/$ex"
+  if cmp -s "$hdr" "$starter"; then echo "$t/$ex is already the untouched stub."; return 0; fi
+  dir="$ROOT/.attempts/${t}_${ex}"
+  mkdir -p "$dir"
+  cp "$hdr" "$dir/$(date +%Y%m%d-%H%M%S).hpp"
+  cp "$starter" "$hdr"
+  echo "Saved attempt to .attempts/${t}_${ex}/ and restored the stub for $t/$ex."
+}
+
+cmd_verify() {
+  local topics="" starters=0 arg t ex hdr fail=0
+  for arg in "$@"; do
+    case "$arg" in
+      --starters) starters=1 ;;
+      -*) die "unknown option: $arg" ;;
+      *) topics="$(resolve_topic "$(normalize "$arg")")" || die "no topic matching '$arg'" ;;
+    esac
+  done
+  [ -n "$topics" ] || topics="$(all_topics)"
+  configure
+  for t in $topics; do
+    for ex in $(exercises_in "$t"); do
+      if [ -f "$ROOT/solutions/$t/$ex/$ex.hpp" ]; then
+        run_one "$t" "$ex" sol 0 || fail=1
+      else
+        printf '%-12s %s/%s\n' MISSING "$t" "$ex"; fail=1
+      fi
+      [ "$starters" = 1 ] || continue
+      hdr="$(header_path "$t" "$ex")"
+      if ! cmp -s "$hdr" "$(starter_path "$t" "$ex")"; then
+        printf '%-12s %s/%s\n' STARTER-DIFF "$t" "$ex"; fail=1
+      elif ! grep -q 'TODO: implement' "$hdr"; then
+        printf '%-12s %s/%s\n' NO-TODO "$t" "$ex"; fail=1
+      else
+        run_one "$t" "$ex" ex 0 >/dev/null
+        if [ "$LAST_RESULT" != FAIL ]; then
+          printf '%-12s %s/%s\n' "STUB-$LAST_RESULT" "$t" "$ex"; fail=1
+        fi
+      fi
+    done
+  done
+  if [ "$fail" -eq 0 ]; then echo "verify: OK"; else echo "verify: FAILED"; fi
+  return "$fail"
+}
+
+cmd="${1:-help}"
+[ $# -gt 0 ] && shift
+case "$cmd" in
+  test) cmd_test "$@" ;;
+  list) cmd_list "$@" ;;
+  reset) cmd_reset "$@" ;;
+  verify) cmd_verify "$@" ;;
+  help|-h|--help) usage ;;
+  *) usage >&2; exit 2 ;;
+esac
