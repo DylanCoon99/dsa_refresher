@@ -20,11 +20,11 @@ Answer questions 1 and 5 of WORKSHEET.md without notes. Both comfortable → ski
 - [ ] For each problem solved in later topics, write the time and space complexity before running the code.
 
 ## CLRS quick reference (≈45 min, all optional)
-| When | Read (3e / 4e) | What to read |
-|---|---|---|
-| Notation feels shaky | Ch. 3 / Ch. 3, "Growth of Functions" / "Characterizing Running Times" | Definitions of O, Ω, Θ only (≈15 min) |
-| Q5 | §4.5 / §4.5, "The master method for solving recurrences" | Theorem statement and the worked examples. 4e: note the extended case 2 (≈15 min) |
-| Q6 | §17.4 / §16.4, "Dynamic tables" | Table expansion only, skip contraction (≈15 min) |
+| When | Read (3e / 4e) | What to read | Skip if |
+|---|---|---|---|
+| Notation feels shaky | Ch. 3 (3e) / Ch. 3 (4e), "Growth of Functions" / "Characterizing Running Times" | Definitions of O, Ω, Θ only (≈15 min) | You can state the O/Ω/Θ definitions cold. |
+| Q5 | §4.5 (3e) / §4.5 (4e), "The master method for solving recurrences" | Theorem statement and the worked examples. 4e: note the extended case 2 (≈15 min) | You can apply all three cases and say when none applies. |
+| Q6 | §17.4 (3e) / §16.4 (4e), "Dynamic tables" | Table expansion only, skip contraction (≈15 min) | You can show doubling gives O(1) amortized append. |
 
 ## Mastery criteria
 - [ ] The complexity of any solution can be stated and justified without hesitation.
