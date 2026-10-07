@@ -1,5 +1,4 @@
 # 01 · Complexity Analysis
-Run everything: `./dsa test 01` · Status: `./dsa list 01`
 
 This topic has no code exercises: `./dsa test 01` reports that there is nothing to run. The work is the pen-and-paper worksheet.
 

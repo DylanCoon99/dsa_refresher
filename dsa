@@ -32,10 +32,17 @@ EOF
 }
 
 # "./topics/08_x/ex/" -> "08_x/ex"
+# Also accepts absolute paths under the repo and a path to the exercise's header.
 normalize() {
-  local s="${1#./}"
+  local s="${1#./}" a b rest
+  s="${s#"$ROOT"/}"
   s="${s#topics/}"
-  echo "${s%/}"
+  s="${s%/}"
+  case "$s" in
+    */*/*) # NN_topic/ex/file.hpp -> NN_topic/ex
+      a="${s%%/*}"; rest="${s#*/}"; b="${rest%%/*}"; s="$a/$b" ;;
+  esac
+  echo "$s"
 }
 
 # Prints the topic folder matching a number or folder name; returns 1 if none match.
@@ -103,12 +110,25 @@ run_timed() {
   perl -e 'alarm shift @ARGV; exec @ARGV or die "exec failed: $!\n"' "$RUN_TIMEOUT" "$@"
 }
 
+# make 3.81 compares mtimes at 1-second granularity, so a header edit (or reset) within
+# the same second as a build can leave a stale binary. Track the header checksum each
+# target was last built from and delete its objects when it differs.
+invalidate_if_header_changed() { # <target> <header checksum>
+  local f="$BUILD/built/$1"
+  mkdir -p "$BUILD/built"
+  if [ "$(cat "$f" 2>/dev/null)" != "$2" ]; then
+    find "$BUILD/CMakeFiles/$1.dir" -name '*.o' -delete 2>/dev/null
+  fi
+  echo "$2" > "$f"
+}
+
 run_one() { # <topic> <exercise> <ex|sol> <verbose 0|1>; sets LAST_RESULT, returns 0 on PASS
   local t="$1" ex="$2" mode="$3" verbose="$4"
   local target="${mode}_${t:0:2}_${ex}"
   local log="$BUILD/logs/$target.log" code=0 suffix=""
   [ "$mode" = sol ] && suffix=" (solution)"
   mkdir -p "$BUILD/logs"
+  if [ "$mode" = ex ]; then invalidate_if_header_changed "$target" "$(checksum "$(header_path "$t" "$ex")")"; fi
   if ! cmake --build "$BUILD" --target "$target" >"$log" 2>&1; then
     LAST_RESULT=BUILD-ERROR
   else
@@ -176,7 +196,7 @@ cmd_test() {
 cmd_list() {
   local topics t ex hdr state
   if [ $# -ge 1 ]; then
-    topics="$(resolve_topic "$(normalize "$1")")" || die "no topic matching '$1'"
+    topics="$(normalize "$1")"; topics="$(resolve_topic "${topics%%/*}")" || die "no topic matching '$1'"
   else
     topics="$(all_topics)"
   fi
@@ -205,24 +225,30 @@ cmd_reset() {
   [ -f "$starter" ] || die "no starter copy for $t/$ex"
   if cmp -s "$hdr" "$starter"; then echo "$t/$ex is already the untouched stub."; return 0; fi
   dir="$ROOT/.attempts/${t}_${ex}"
-  mkdir -p "$dir"
-  cp "$hdr" "$dir/$(date +%Y%m%d-%H%M%S).hpp"
-  cp "$starter" "$hdr"
-  touch "$hdr"  # fresh mtime so make always rebuilds (same-second reset after a build left a stale binary)
-  echo "Saved attempt to .attempts/${t}_${ex}/ and restored the stub for $t/$ex."
+  if [ -f "$hdr" ]; then
+    mkdir -p "$dir"
+    cp "$hdr" "$dir/$(date +%Y%m%d-%H%M%S).hpp"
+    cp "$starter" "$hdr"
+    echo "Saved attempt to .attempts/${t}_${ex}/ and restored the stub for $t/$ex."
+  else
+    cp "$starter" "$hdr"
+    echo "$t/$ex had no header to back up; restored the stub."
+  fi
 }
 
 cmd_verify() {
-  local topics="" starters=0 arg t ex hdr fail=0
+  local topics="" topics_given="" starters=0 arg t ex hdr fail=0
   for arg in "$@"; do
     case "$arg" in
       --starters) starters=1 ;;
       -*) die "unknown option: $arg" ;;
-      *) topics="$(resolve_topic "$(normalize "$arg")")" || die "no topic matching '$arg'" ;;
+      *) topics="$(normalize "$arg")"; topics="$(resolve_topic "${topics%%/*}")" || die "no topic matching '$arg'" ;;
     esac
   done
+  topics_given="$topics"
   [ -n "$topics" ] || topics="$(all_topics)"
   configure
+  mkdir -p "$BUILD/logs"
   for t in $topics; do
     for ex in $(exercises_in "$t"); do
       if [ -f "$ROOT/solutions/$t/$ex/$ex.hpp" ]; then
@@ -244,6 +270,14 @@ cmd_verify() {
       fi
     done
   done
+  if [ -z "$topics_given" ]; then
+    if cmake --build "$BUILD" --target common_tests >"$BUILD/logs/common_tests.log" 2>&1 \
+       && run_timed "$BUILD/bin/common_tests" >>"$BUILD/logs/common_tests.log" 2>&1; then
+      printf '%-12s %s\n' PASS common_tests
+    else
+      printf '%-12s %s\n' FAIL common_tests; fail=1
+    fi
+  fi
   if [ "$fail" -eq 0 ]; then echo "verify: OK"; else echo "verify: FAILED"; fi
   return "$fail"
 }

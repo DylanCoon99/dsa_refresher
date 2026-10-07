@@ -1,5 +1,7 @@
 #!/bin/bash
-# Exercises ./dsa against throwaway fixtures in topics/99_selftest. Run: tests/dsa_selftest.sh
+# Maintainer tool (not for learners): exercises ./dsa against throwaway fixtures.
+# It temporarily creates topics/99_selftest (plus solutions/ and .starter/ copies) and
+# removes them on exit. Run: tests/dsa_selftest.sh
 set -u
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 DSA="$ROOT/dsa"
@@ -52,11 +54,16 @@ expect "passing after run"                 'passing +99_selftest/ok'            
 expect "reset backs up attempt"            'Saved attempt'                       "$("$DSA" reset 99/ok)"
 expect "backup file exists"                '\.hpp$'                              "$(ls "$ROOT/.attempts/99_selftest_ok" 2>&1)"
 expect "reset restores stub"               'untouched +99_selftest/ok'          "$("$DSA" list 99)"
+expect "test right after reset sees the stub" '^FAIL +99_selftest/ok$'         "$("$DSA" test 99/ok 2>&1)"
 expect "verify flags missing solutions"    '^MISSING +99_selftest/broken'       "$(DSA_RUN_TIMEOUT=3 "$DSA" verify 99 2>&1)"
 expect "verify fails overall"              'verify: FAILED'                      "$(DSA_RUN_TIMEOUT=3 "$DSA" verify 99 2>&1)"
 expect "unknown topic is an error"         "no topic matching '77'"              "$("$DSA" test 77 2>&1)"
-expect "two_sum stub fails"                '^FAIL +02_arrays_hashing/two_sum$'   "$("$DSA" test 2/two_sum 2>&1)"
-expect "two_sum verifies with starters"    'verify: OK'                          "$("$DSA" verify 02 --starters 2>&1)"
+if cmp -s "$ROOT/topics/02_arrays_hashing/two_sum/two_sum.hpp" "$ROOT/.starter/02_arrays_hashing/two_sum/two_sum.hpp"; then
+  expect "two_sum stub fails"              '^FAIL +02_arrays_hashing/two_sum$'   "$("$DSA" test 2/two_sum 2>&1)"
+  expect "two_sum verifies with starters"  'verify: OK'                          "$("$DSA" verify 02 --starters 2>&1)"
+else
+  echo "skip two_sum checks (your two_sum.hpp differs from its starter)"
+fi
 
 echo
 if [ "$fails" -eq 0 ]; then echo "dsa selftest: all passed"; else echo "dsa selftest: $fails failed"; fi

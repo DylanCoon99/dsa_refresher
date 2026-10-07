@@ -8,7 +8,7 @@ a stub for you to fill in, and a test suite.
 ```bash
 ./dsa test 02/two_sum     # build + run one exercise
 ./dsa test 02             # every exercise in a topic, one line each
-./dsa list                # untouched / edited / failing / passing for everything
+./dsa list                # untouched / edited / failing / passing (plus build-error / timeout / crash)
 ```
 Requirements: Apple clang (Xcode command line tools) and CMake ≥ 3.20. Nothing else to install.
 
