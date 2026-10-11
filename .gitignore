@@ -1,3 +1,4 @@
 build/
 .attempts/
 .DS_Store
+*.trace/
