@@ -14,7 +14,7 @@ Attempt cold (≤ 40 min each): `group_anagrams`, `product_except_self`. Both co
 - [ ] `hash_map`: a string-to-int hash map with separate chaining and automatic resizing · `./dsa test 02/hash_map`
 
 ## Practice
-- [ ] `contains_duplicate` · Easy · `./dsa test 02/contains_duplicate`
+- [x] `contains_duplicate` · Easy · `./dsa test 02/contains_duplicate`
 - [ ] `valid_anagram` · Easy · `./dsa test 02/valid_anagram`
 - [ ] `two_sum` · Easy · `./dsa test 02/two_sum`
 - [ ] `group_anagrams` · Medium · `./dsa test 02/group_anagrams`
