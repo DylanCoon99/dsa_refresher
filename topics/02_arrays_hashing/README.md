@@ -15,7 +15,7 @@ Attempt cold (≤ 40 min each): `group_anagrams`, `product_except_self`. Both co
 
 ## Practice
 - [x] `contains_duplicate` · Easy · `./dsa test 02/contains_duplicate`
-- [ ] `valid_anagram` · Easy · `./dsa test 02/valid_anagram`
+- [x] `valid_anagram` · Easy · `./dsa test 02/valid_anagram`
 - [x] `two_sum` · Easy · `./dsa test 02/two_sum`
 - [ ] `group_anagrams` · Medium · `./dsa test 02/group_anagrams`
 - [ ] `top_k_frequent` · Medium · `./dsa test 02/top_k_frequent`
