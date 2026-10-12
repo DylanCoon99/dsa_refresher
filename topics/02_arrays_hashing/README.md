@@ -19,7 +19,7 @@ Attempt cold (≤ 40 min each): `group_anagrams`, `product_except_self`. Both co
 - [x] `two_sum` · Easy · `./dsa test 02/two_sum`
 - [ ] `group_anagrams` · Medium · `./dsa test 02/group_anagrams`
 - [x] `top_k_frequent` · Medium · `./dsa test 02/top_k_frequent`
-- [ ] `product_except_self` · Medium · `./dsa test 02/product_except_self`
+- [x] `product_except_self` · Medium · `./dsa test 02/product_except_self`
 - [ ] `longest_consecutive` · Medium · `./dsa test 02/longest_consecutive`
 
 ## CLRS quick reference (≈50 min, all optional)
