@@ -23,7 +23,7 @@ route is exponential and will time out.
 - These limits are chosen for this exercise; they cover every test input.
 
 ## Target
-Time: O(R · C · log(R · C)) · Space: O(R · C)
+Time: O(R · C · log(R · C)) · Space: O(R · C) · Where: R = number of rows, C = number of columns.
 
 ## Hints
 <details><summary>Hint 1</summary>Minimizing the <em>largest</em> step is a shortest-path problem where a route's cost is a maximum instead of a sum. What goes in the heap, and how do you combine the cost so far with the next step?</details>

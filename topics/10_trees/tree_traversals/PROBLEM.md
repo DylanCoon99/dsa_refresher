@@ -30,7 +30,7 @@ free nodes. Except in this exercise, large tree inputs are balanced, so recursio
 - Any `int` values.
 
 ## Target
-Time: O(n) · Space: O(h) for the stack in the DFS traversals (O(n) for a chain), O(w) for the queue in level order
+Time: O(n) · Space: O(h) for the stack in the DFS traversals (O(n) for a chain), O(w) for the queue in level order · Where: n = number of nodes, h = height of the tree, w = maximum number of nodes on one level.
 
 ## CLRS (optional, ≈10 min)
 - §12.1 (3e) / §12.1 (4e), "What is a binary search tree?": INORDER-TREE-WALK (≈5 min). An end-of-section exercise there asks for the non-recursive inorder walk using a stack.

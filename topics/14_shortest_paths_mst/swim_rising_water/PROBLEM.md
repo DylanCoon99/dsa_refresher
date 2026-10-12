@@ -27,7 +27,7 @@ route is exponential and will time out.
 - These limits are chosen for this exercise; they cover every test input.
 
 ## Target
-Time: O(n² log n) · Space: O(n²)
+Time: O(n² log n) · Space: O(n²) · Where: the grid is n × n.
 
 ## Hints
 <details><summary>Hint 1</summary>The water level you need for a route is the highest cell on it. Which of the shortest-path variants from this topic minimizes a route's maximum instead of its sum?</details>

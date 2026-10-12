@@ -24,7 +24,7 @@ int findTargetSumWays(const std::vector<int>& nums, int target);
 - These limits are chosen for this exercise; they cover every test input. With n ≤ 20 even plain 2ⁿ enumeration is fast enough, so the tests do not require the DP; do it as practice.
 
 ## Target
-Time: O(n · sum) · Space: O(sum)
+Time: O(n · sum) · Space: O(sum) · Where: n = nums.size(), sum = total of all values in nums.
 
 ## Hints
 <details><summary>Hint 1</summary>Let <code>P</code> be the sum of the numbers with <code>+</code> and <code>N</code> the sum with <code>-</code>. You know <code>P - N = target</code> and <code>P + N = total</code>. What single subset-sum question does that turn into?</details>

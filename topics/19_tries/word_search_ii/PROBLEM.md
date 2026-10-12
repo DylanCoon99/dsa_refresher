@@ -20,7 +20,7 @@ You are given a grid of lowercase letters `board` and a list of lowercase `words
 - (The word count and the 12×12 limit are chosen for this exercise; the tests stay inside them.)
 
 ## Target
-Time: roughly O(cells · 4 · 3^(L-1)) in the worst case, but only paths that are prefixes of some word are explored · Space: O(total characters in words) for the trie
+Time: roughly O(cells · 4 · 3^(L-1)) in the worst case, but only paths that are prefixes of some word are explored · Space: O(total characters in words) for the trie · Where: cells = rows × columns of the board, L = length of the longest word.
 
 ## Hints
 <details><summary>Hint 1</summary>Searching the board once per word repeats the same path exploration thousands of times. How could one board DFS test every word at the same time?</details>

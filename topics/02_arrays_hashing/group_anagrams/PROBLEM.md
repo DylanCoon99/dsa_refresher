@@ -18,7 +18,7 @@ word appears in exactly one group; duplicate words stay duplicated.
 - Each word has length ≤ 100 and uses lowercase letters (a word may be empty).
 
 ## Target
-Time: O(n · L log L), or O(n · L) with letter counts · Space: O(n · L)
+Time: O(n · L log L), or O(n · L) with letter counts · Space: O(n · L) · Where: n = number of words, L = length of the longest word.
 
 ## Hints
 <details><summary>Hint 1</summary>Two words are anagrams exactly when they share some canonical form. What could that form be?</details>

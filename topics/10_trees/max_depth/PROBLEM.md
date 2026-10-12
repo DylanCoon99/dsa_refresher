@@ -18,7 +18,7 @@ depth `0`; a single node has depth `1`.
 - Any `int` values.
 
 ## Target
-Time: O(n) · Space: O(h)
+Time: O(n) · Space: O(h) · Where: n = number of nodes, h = height of the tree.
 
 ## Hints
 <details><summary>Hint 1</summary>How does the depth of a tree relate to the depths of its two subtrees?</details>

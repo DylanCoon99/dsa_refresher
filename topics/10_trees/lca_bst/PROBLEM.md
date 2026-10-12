@@ -22,7 +22,7 @@ Tree `{6, 2, 8, 0, 4, 7, 9, null, null, 3, 5}`:
 - Any `int` values.
 
 ## Target
-Time: O(h) · Space: O(1) extra if written iteratively
+Time: O(h) · Space: O(1) extra if written iteratively · Where: h = height of the tree.
 
 ## Hints
 <details><summary>Hint 1</summary>Compare `p->val` and `q->val` with the current node's value. If both are smaller, which subtree must contain the answer? If both are larger?</details>

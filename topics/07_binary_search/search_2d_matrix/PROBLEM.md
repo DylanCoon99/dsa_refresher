@@ -17,7 +17,7 @@ Return `true` if `target` appears anywhere in the grid, else `false`.
 - −2³¹ ≤ matrix[i][j], target ≤ 2³¹ − 1 (any `int`)
 
 ## Target
-Time: O(log(m·n)) · Space: O(1)
+Time: O(log(m·n)) · Space: O(1) · Where: m = number of rows, n = number of columns.
 
 ## Hints
 <details><summary>Hint 1</summary>If you read the grid row by row, left to right, what kind of sequence do you get?</details>

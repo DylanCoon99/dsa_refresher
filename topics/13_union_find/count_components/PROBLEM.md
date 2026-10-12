@@ -18,7 +18,7 @@ own. The same edge may appear more than once, in either orientation.
 - These limits are chosen for this exercise; they cover every test input.
 
 ## Target
-Time: O((n + E) · α(n)) · Space: O(n)
+Time: O((n + E) · α(n)) · Space: O(n) · Where: E = number of edges.
 
 ## Hints
 <details><summary>Hint 1</summary>Start with n separate groups. What happens to the number of groups each time an edge joins two nodes that are in different groups, and what if they are already in the same group?</details>

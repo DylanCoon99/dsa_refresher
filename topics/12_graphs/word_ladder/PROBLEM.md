@@ -22,7 +22,7 @@ list.) Return the number of words in the **shortest** ladder, counting both `beg
 - These limits are chosen for this exercise; they cover every test input.
 
 ## Target
-Time: O(n · L²) · Space: O(n · L²)
+Time: O(n · L²) · Space: O(n · L²) · Where: n = number of words in the list, L = word length.
 
 The large test (5000 words of length 5) rejects comparing every pair of words to find neighbors
 (O(n² · L)). Instead, file each word under its "wildcard" patterns (the word with one letter

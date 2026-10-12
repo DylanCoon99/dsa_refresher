@@ -20,7 +20,7 @@ be negative: if every value is negative, the answer is the largest single node.
 - Node values in [−1000, 1000], so every path sum fits in `int`.
 
 ## Target
-Time: O(n) · Space: O(h)
+Time: O(n) · Space: O(h) · Where: n = number of nodes, h = height of the tree.
 
 ## Hints
 <details><summary>Hint 1</summary>For a node, what is the best sum of a path that starts at that node and only goes down? Should you ever extend it into a child whose best downward sum is negative?</details>

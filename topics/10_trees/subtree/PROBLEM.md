@@ -22,7 +22,7 @@ Both trees are non-empty (at least one node each).
 - Any `int` values.
 
 ## Target
-Time: O(n · m) simple approach (n and m the node counts) · Space: O(h)
+Time: O(n · m) simple approach (n and m the node counts) · Space: O(h) · Where: h = height of the main tree.
 
 ## Hints
 <details><summary>Hint 1</summary>You already know how to test whether two trees are identical. At which nodes of `root` do you need to run that test?</details>

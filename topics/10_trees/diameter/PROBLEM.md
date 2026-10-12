@@ -18,7 +18,7 @@ The path may or may not pass through the root. A single node (or an empty tree) 
 - Any `int` values (values do not matter).
 
 ## Target
-Time: O(n) · Space: O(h)
+Time: O(n) · Space: O(h) · Where: n = number of nodes, h = height of the tree.
 Recomputing the height of both subtrees at every node costs O(n log n) on a balanced tree and still passes the large test; the test only rules out quadratic work on balanced input.
 
 ## Hints

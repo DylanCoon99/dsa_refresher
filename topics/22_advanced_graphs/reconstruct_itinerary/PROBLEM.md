@@ -15,7 +15,7 @@
 - The reference uses recursive DFS (depth up to the number of tickets); production code would use an explicit stack.
 
 ## Target
-Time: O(E log E) · Space: O(E)
+Time: O(E log E) · Space: O(E) · Where: E = number of tickets.
 
 ## CLRS (optional, ≈10 min)
 - Ch. 22 (3e) / Ch. 20 (4e), end-of-chapter problem "Euler tour": read the statement and the idea of walking edges and splicing cycles.

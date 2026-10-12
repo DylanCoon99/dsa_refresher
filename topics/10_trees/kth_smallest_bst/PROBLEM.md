@@ -18,7 +18,7 @@ counting from `k = 1` for the smallest. `1 ≤ k ≤ n` always holds.
 - Any `int` values.
 
 ## Target
-Time: O(h + k) · Space: O(h)
+Time: O(h + k) · Space: O(h) · Where: h = height of the tree.
 
 ## Hints
 <details><summary>Hint 1</summary>What order do the values come out in during an inorder traversal of a BST?</details>

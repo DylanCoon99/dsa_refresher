@@ -16,7 +16,7 @@ Implement two functions:
 - `0 ≤ |s|, |text|, |pattern| ≤ 10⁶` (limits chosen for this exercise; the tests stay inside them). Characters are arbitrary `char` values; the tests use lowercase letters.
 
 ## Target
-Time: O(n + m) · Space: O(m) beyond the output (a full `pi` for the pattern is fine)
+Time: O(n + m) · Space: O(m) beyond the output (a full `pi` for the pattern is fine) · Where: n = text length, m = pattern length.
 
 ## CLRS (optional, ≈20 min)
 - §32.4 (3e) / §32.4 (4e), "The Knuth-Morris-Pratt algorithm": read COMPUTE-PREFIX-FUNCTION and KMP-MATCHER. CLRS indexes from 1 and calls the table π; the exercise is 0-indexed.

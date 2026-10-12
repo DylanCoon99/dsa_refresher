@@ -19,7 +19,7 @@ non-empty tree are not.
 - Any `int` values.
 
 ## Target
-Time: O(min(n, m)) · Space: O(h)
+Time: O(min(n, m)) · Space: O(h) · Where: n and m = the node counts of the two trees, h = height of the shorter tree.
 
 ## Hints
 <details><summary>Hint 1</summary>When are two single positions "equal"? Consider the cases: both empty, exactly one empty, both present.</details>

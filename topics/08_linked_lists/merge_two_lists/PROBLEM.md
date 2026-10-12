@@ -18,7 +18,7 @@ You may `delete` nodes you remove; the tests never free nodes, so it makes no di
 - Any `int` values; each input list is sorted non-decreasing.
 
 ## Target
-Time: O(n + m) · Space: O(1) extra if you relink nodes (not checked by the tests)
+Time: O(n + m) · Space: O(1) extra if you relink nodes (not checked by the tests) · Where: n and m = the lengths of the two lists.
 
 ## Hints
 <details><summary>Hint 1</summary>Which of the two current heads must come next in the output? Could a dummy head node save you a special case for the first output node?</details>

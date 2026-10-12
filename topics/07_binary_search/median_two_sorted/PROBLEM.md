@@ -20,7 +20,7 @@ logarithmic Target anyway, since that is the point of the exercise.
 - Any `int` values, including `INT_MIN` and `INT_MAX`; the sum of two middle values can overflow a 32-bit `int`
 
 ## Target
-Time: O(log(min(m, n))) · Space: O(1)
+Time: O(log(min(m, n))) · Space: O(1) · Where: m = nums1.size(), n = nums2.size().
 
 ## Hints
 <details><summary>Hint 1</summary>The median splits the combined values into a left half and a right half of (nearly) equal size, with everything on the left ≤ everything on the right. If you take i elements from nums1 for the left half, how many must come from nums2?</details>

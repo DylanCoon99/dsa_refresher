@@ -22,7 +22,7 @@ bool canPartition(const std::vector<int>& nums);
 - These limits are chosen for this exercise; they cover every test input.
 
 ## Target
-Time: O(n · sum) · Space: O(sum)
+Time: O(n · sum) · Space: O(sum) · Where: n = nums.size(), sum = total of all values in nums.
 
 The large test (n = 200) rejects enumerating all 2ⁿ subsets.
 

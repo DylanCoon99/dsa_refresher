@@ -19,7 +19,7 @@ by shape and values, so modifying the nodes in place or building new ones both p
 - Any `int` values.
 
 ## Target
-Time: O(n) · Space: O(h)
+Time: O(n) · Space: O(h) · Where: n = number of nodes, h = height of the tree.
 
 ## Hints
 <details><summary>Hint 1</summary>If you could already mirror both children's subtrees, what is left to do at the current node?</details>

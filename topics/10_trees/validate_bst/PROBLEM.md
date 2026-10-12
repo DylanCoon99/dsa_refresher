@@ -24,7 +24,7 @@ sentinel bounds of those values themselves need care.
 - Any `int` values, including `INT_MIN` (−2147483648) and `INT_MAX` (2147483647).
 
 ## Target
-Time: O(n) · Space: O(h)
+Time: O(n) · Space: O(h) · Where: n = number of nodes, h = height of the tree.
 
 ## Hints
 <details><summary>Hint 1</summary>When you go into a child, what range of values is allowed for the whole subtree there? How does that range shrink as you descend?</details>

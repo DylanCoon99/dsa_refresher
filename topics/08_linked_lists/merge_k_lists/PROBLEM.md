@@ -22,7 +22,7 @@ large test (10⁴ lists of 10 nodes) rejects.
 - Any `int` values.
 
 ## Target
-Time: O(N log k) · Space: O(k) (the tests only reject the O(N·k) approach; they cannot tell a missing log factor)
+Time: O(N log k) · Space: O(k) (the tests only reject the O(N·k) approach; they cannot tell a missing log factor) · Where: N = total number of nodes across all lists, k = number of lists.
 
 ## CLRS (optional, ≈10 min)
 - §6.5 (3e) / §6.5 (4e), "Priority queues": read what a priority queue supports (insert, extract-min) and the heap-based implementation.

@@ -14,7 +14,7 @@ Return the smallest index `i` such that `haystack` contains `needle` starting at
 - `0 ≤ |haystack|, |needle| ≤ 10⁶` (limits chosen for this exercise; the tests stay inside them). Characters are arbitrary; the tests use lowercase letters.
 
 ## Target
-Time: O(n + m) · Space: O(m)
+Time: O(n + m) · Space: O(m) · Where: n = haystack length, m = needle length.
 
 ## CLRS (optional, ≈5 min)
 - §32.1 (3e) / §32.1 (4e), "The naive string-matching algorithm": read it to see the O(nm) baseline that the large test is built to defeat. The linear-time algorithm is in the `kmp` exercise (§32.4).
