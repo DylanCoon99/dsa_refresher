@@ -14,7 +14,7 @@ Attempt cold (≤ 40 min each): `three_sum`, `container_most_water`. Both comfor
 - [ ] `partition_pivot`: partition an array around a pivot, in place · `./dsa test 03/partition_pivot`
 
 ## Practice
-- [ ] `valid_palindrome` · Easy · `./dsa test 03/valid_palindrome`
+- [x] `valid_palindrome` · Easy · `./dsa test 03/valid_palindrome`
 - [ ] `two_sum_ii` · Medium · `./dsa test 03/two_sum_ii`
 - [ ] `three_sum` · Medium · `./dsa test 03/three_sum`
 - [ ] `container_most_water` · Medium · `./dsa test 03/container_most_water`
