@@ -11,7 +11,7 @@ Attempt cold (≤ 40 min each): `group_anagrams`, `product_except_self`. Both co
 - [ ] String immutability and the cost of repeated concatenation.
 
 ## Implement
-- [ ] `hash_map`: a string-to-int hash map with separate chaining and automatic resizing · `./dsa test 02/hash_map`
+- [x] `hash_map`: a string-to-int hash map with separate chaining and automatic resizing · `./dsa test 02/hash_map`
 
 ## Practice
 - [x] `contains_duplicate` · Easy · `./dsa test 02/contains_duplicate`

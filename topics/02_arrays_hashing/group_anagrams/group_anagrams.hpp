@@ -35,11 +35,6 @@ inline std::vector<std::vector<std::string>> groupAnagrams(const std::vector<std
 
 	for (auto& [arr, words] : map) {
 		result.push_back(words);
-		/*
-		for (const auto& element : words) {
-			std::cout << element << " ";
-		}
-		*/
 		std::cout << "\n";
 	}
 	
