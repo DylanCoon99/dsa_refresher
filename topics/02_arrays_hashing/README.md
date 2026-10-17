@@ -6,8 +6,8 @@ Attempt cold (≤ 40 min each): `group_anagrams`, `product_except_self`. Both co
 
 ## Review (from memory first)
 - [x] Dynamic array growth, contiguous memory, and cache locality.
-- [ ] Hash table internals: hash functions, chaining versus open addressing, load factor and resizing, worst-case degradation.
-- [ ] Hash sets versus hash maps, and frequency counting.
+- [x] Hash table internals: hash functions, chaining versus open addressing, load factor and resizing, worst-case degradation.
+- [x] Hash sets versus hash maps, and frequency counting.
 - [x] String immutability and the cost of repeated concatenation.
 
 ## Implement
@@ -31,5 +31,5 @@ Attempt cold (≤ 40 min each): `group_anagrams`, `product_except_self`. Both co
 | Review: dynamic arrays | §17.4 (3e) / §16.4 (4e), "Dynamic tables" | Table expansion (≈15 min) | You can show doubling gives O(1) amortized append. |
 
 ## Mastery criteria
-- [ ] Hashing can be used to reduce O(n²) pair searches to O(n) without prompting.
+- [x] Hashing can be used to reduce O(n²) pair searches to O(n) without prompting.
 - [x] Collision handling and resizing can be explained.
