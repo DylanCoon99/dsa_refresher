@@ -5,10 +5,10 @@ Run everything: `./dsa test 02` · Status: `./dsa list 02`
 Attempt cold (≤ 40 min each): `group_anagrams`, `product_except_self`. Both comfortable → skim Review, do Implement, go to Mastery.
 
 ## Review (from memory first)
-- [ ] Dynamic array growth, contiguous memory, and cache locality.
+- [x] Dynamic array growth, contiguous memory, and cache locality.
 - [ ] Hash table internals: hash functions, chaining versus open addressing, load factor and resizing, worst-case degradation.
 - [ ] Hash sets versus hash maps, and frequency counting.
-- [ ] String immutability and the cost of repeated concatenation.
+- [x] String immutability and the cost of repeated concatenation.
 
 ## Implement
 - [x] `hash_map`: a string-to-int hash map with separate chaining and automatic resizing · `./dsa test 02/hash_map`
@@ -20,7 +20,7 @@ Attempt cold (≤ 40 min each): `group_anagrams`, `product_except_self`. Both co
 - [x] `group_anagrams` · Medium · `./dsa test 02/group_anagrams`
 - [x] `top_k_frequent` · Medium · `./dsa test 02/top_k_frequent`
 - [x] `product_except_self` · Medium · `./dsa test 02/product_except_self`
-- [ ] `longest_consecutive` · Medium · `./dsa test 02/longest_consecutive`
+- [x] `longest_consecutive` · Medium · `./dsa test 02/longest_consecutive`
 
 ## CLRS quick reference (≈50 min, all optional)
 | When | Read (3e / 4e) | What to read | Skip if |
@@ -32,4 +32,4 @@ Attempt cold (≤ 40 min each): `group_anagrams`, `product_except_self`. Both co
 
 ## Mastery criteria
 - [ ] Hashing can be used to reduce O(n²) pair searches to O(n) without prompting.
-- [ ] Collision handling and resizing can be explained.
+- [x] Collision handling and resizing can be explained.
