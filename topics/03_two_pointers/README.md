@@ -17,7 +17,7 @@ Attempt cold (≤ 40 min each): `three_sum`, `container_most_water`. Both comfor
 - [x] `valid_palindrome` · Easy · `./dsa test 03/valid_palindrome`
 - [ ] `two_sum_ii` · Medium · `./dsa test 03/two_sum_ii`
 - [ ] `three_sum` · Medium · `./dsa test 03/three_sum`
-- [ ] `container_most_water` · Medium · `./dsa test 03/container_most_water`
+- [x] `container_most_water` · Medium · `./dsa test 03/container_most_water`
 - [ ] `trapping_rain_water` · Hard · `./dsa test 03/trapping_rain_water`
 
 ## CLRS quick reference
