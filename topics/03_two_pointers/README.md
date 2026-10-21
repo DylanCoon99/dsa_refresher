@@ -11,7 +11,7 @@ Attempt cold (≤ 40 min each): `three_sum`, `container_most_water`. Both comfor
 
 ## Implement
 - [x] `dedup_sorted`: in-place deduplication of a sorted array · `./dsa test 03/dedup_sorted`
-- [x] `partition_pivot`: partition an array around a pivot, in place · `./dsa test 03/partition_pivot`
+- [x] `partition_pivot`: partition an array around a pivot in place · `./dsa test 03/partition_pivot`
 
 ## Practice
 - [x] `valid_palindrome` · Easy · `./dsa test 03/valid_palindrome`
