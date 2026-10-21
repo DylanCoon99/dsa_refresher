@@ -13,7 +13,7 @@ Attempt cold (≤ 40 min each): `longest_substring_no_repeat`, `char_replacement
 - [ ] `window_template`: a reusable variable-window template that maintains a frequency map · `./dsa test 04/window_template`
 
 ## Practice
-- [ ] `best_time_stock` · Easy · `./dsa test 04/best_time_stock`
+- [x] `best_time_stock` · Easy · `./dsa test 04/best_time_stock`
 - [ ] `longest_substring_no_repeat` · Medium · `./dsa test 04/longest_substring_no_repeat`
 - [ ] `char_replacement` · Medium · `./dsa test 04/char_replacement`
 - [ ] `permutation_in_string` · Medium · `./dsa test 04/permutation_in_string`
