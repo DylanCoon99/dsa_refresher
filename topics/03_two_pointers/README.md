@@ -6,11 +6,11 @@ Attempt cold (≤ 40 min each): `three_sum`, `container_most_water`. Both comfor
 
 ## Review (from memory first)
 - [x] Opposite-direction pointers on sorted data.
-- [ ] Same-direction (read/write) pointers for in-place modification.
+- [x] Same-direction (read/write) pointers for in-place modification.
 - [x] Fast and slow pointers. Their use for cycles is revisited in Linked Lists.
 
 ## Implement
-- [ ] `dedup_sorted`: in-place deduplication of a sorted array · `./dsa test 03/dedup_sorted`
+- [x] `dedup_sorted`: in-place deduplication of a sorted array · `./dsa test 03/dedup_sorted`
 - [ ] `partition_pivot`: partition an array around a pivot, in place · `./dsa test 03/partition_pivot`
 
 ## Practice
@@ -24,4 +24,4 @@ Attempt cold (≤ 40 min each): `three_sum`, `container_most_water`. Both comfor
 Not directly covered by CLRS.
 
 ## Mastery criteria
-- [ ] It can be recognized immediately when sorted input permits a two-pointer approach, and the reason each pointer moves can be justified.
+- [x] It can be recognized immediately when sorted input permits a two-pointer approach, and the reason each pointer moves can be justified.
