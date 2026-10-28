@@ -15,19 +15,20 @@ Attempt cold (≤ 40 min each): `decode_ways`, `edit_distance`. Both comfortable
 
 ## Implement
 Each one is written twice, memoized (`…Memo`) and tabulated (`…Tab`); the tests run the same cases against both.
-- [ ] `coin_change`: fewest coins for an amount, memoized and tabulated · `./dsa test 16/coin_change`
+- [ ] `coin_change`: fewest coins for an amount, memoized and tabulated · `./dsa test 16/coin_change` · ⭐ interview priority
 - [ ] `lcs`: longest common subsequence, memoized and tabulated · `./dsa test 16/lcs`
 - [ ] `knapsack_01`: 0/1 knapsack, memoized and tabulated · `./dsa test 16/knapsack_01`
 
 ## Practice
+⭐ = interview priority: do these first if you're short on time.
 One-dimensional:
 - [ ] `climbing_stairs` · Easy · `./dsa test 16/climbing_stairs`
 - [ ] `house_robber` · Medium · `./dsa test 16/house_robber`
 - [ ] `house_robber_ii` · Medium · `./dsa test 16/house_robber_ii`
 - [ ] `decode_ways` · Medium · `./dsa test 16/decode_ways`
-- [ ] `coin_change` · Medium · `./dsa test 16/coin_change` (same exercise as under Implement)
-- [ ] `word_break` · Medium · `./dsa test 16/word_break`
-- [ ] `lis` · Medium · `./dsa test 16/lis`
+- [ ] `coin_change` · Medium · `./dsa test 16/coin_change` (same exercise as under Implement) · ⭐ interview priority
+- [ ] `word_break` · Medium · `./dsa test 16/word_break` · ⭐ interview priority
+- [ ] `lis` · Medium · `./dsa test 16/lis` · ⭐ interview priority
 
 Grid and knapsack:
 - [ ] `unique_paths` · Medium · `./dsa test 16/unique_paths`

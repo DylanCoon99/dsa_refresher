@@ -13,12 +13,13 @@ Attempt cold (≤ 40 min each): `word_dictionary`, `word_search_ii`. Both comfor
 - [ ] Pruning a trie during backtracking.
 
 ## Implement
-- [ ] `trie`: a trie supporting insert, search, and `startsWith` (also the "Implement Trie (Prefix Tree)" practice problem) · `./dsa test 19/trie`
+- [ ] `trie`: a trie supporting insert, search, and `startsWith` (also the "Implement Trie (Prefix Tree)" practice problem) · `./dsa test 19/trie` · ⭐ interview priority
 
 ## Practice
-- [ ] `trie` · Medium · `./dsa test 19/trie` (Implement Trie (Prefix Tree); the same exercise as above)
+⭐ = interview priority: do these first if you're short on time.
+- [ ] `trie` · Medium · `./dsa test 19/trie` (Implement Trie (Prefix Tree); the same exercise as above) · ⭐ interview priority
 - [ ] `word_dictionary` · Medium · `./dsa test 19/word_dictionary`
-- [ ] `word_search_ii` · Hard · `./dsa test 19/word_search_ii`
+- [ ] `word_search_ii` · Hard · `./dsa test 19/word_search_ii` · ⭐ interview priority
 
 ## CLRS quick reference (≈5 min, all optional)
 CLRS covers tries only through one end-of-chapter problem; prefer external references and the hints in each PROBLEM.md.

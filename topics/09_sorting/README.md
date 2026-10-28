@@ -18,9 +18,10 @@ Attempt cold (≤ 40 min each): `sort_colors`, `kth_largest_array`. Both comfort
 - [ ] `quickselect`: the k-th smallest element in expected O(n) · `./dsa test 09/quickselect`
 
 ## Practice
+⭐ = interview priority: do these first if you're short on time.
 - [ ] `sort_an_array` · Medium · solve it with each implementation above · `./dsa test 09/sort_an_array`
-- [ ] `sort_colors` · Medium · `./dsa test 09/sort_colors`
-- [ ] `kth_largest_array` · Medium · solve with quickselect · `./dsa test 09/kth_largest_array`
+- [ ] `sort_colors` · Medium · `./dsa test 09/sort_colors` · ⭐ interview priority
+- [ ] `kth_largest_array` · Medium · solve with quickselect · `./dsa test 09/kth_largest_array` · ⭐ interview priority
 - [ ] `largest_number` · Medium · `./dsa test 09/largest_number`
 - [ ] `h_index` · Medium · `./dsa test 09/h_index`
 

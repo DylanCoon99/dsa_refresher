@@ -14,11 +14,12 @@ Attempt cold (≤ 40 min each): `group_anagrams`, `product_except_self`. Both co
 - [x] `hash_map`: a string-to-int hash map with separate chaining and automatic resizing · `./dsa test 02/hash_map`
 
 ## Practice
+⭐ = interview priority: do these first if you're short on time.
 - [x] `contains_duplicate` · Easy · `./dsa test 02/contains_duplicate`
 - [x] `valid_anagram` · Easy · `./dsa test 02/valid_anagram`
-- [x] `two_sum` · Easy · `./dsa test 02/two_sum`
-- [x] `group_anagrams` · Medium · `./dsa test 02/group_anagrams`
-- [x] `top_k_frequent` · Medium · `./dsa test 02/top_k_frequent`
+- [x] `two_sum` · Easy · `./dsa test 02/two_sum` · ⭐ interview priority
+- [x] `group_anagrams` · Medium · `./dsa test 02/group_anagrams` · ⭐ interview priority
+- [x] `top_k_frequent` · Medium · `./dsa test 02/top_k_frequent` · ⭐ interview priority
 - [x] `product_except_self` · Medium · `./dsa test 02/product_except_self`
 - [x] `longest_consecutive` · Medium · `./dsa test 02/longest_consecutive`
 

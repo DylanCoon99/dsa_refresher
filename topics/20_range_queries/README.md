@@ -16,9 +16,10 @@ Attempt cold (≤ 40 min each): `range_sum_mutable`, `my_calendar_i`. Both comfo
 - [ ] `segment_tree`: a segment tree with range-sum queries and point assignment · `./dsa test 20/segment_tree`
 
 ## Practice
-- [ ] `range_sum_mutable` · Medium · `./dsa test 20/range_sum_mutable`
+⭐ = interview priority: do these first if you're short on time.
+- [ ] `range_sum_mutable` · Medium · `./dsa test 20/range_sum_mutable` · ⭐ interview priority
 - [ ] `count_smaller_after_self` · Hard · `./dsa test 20/count_smaller_after_self`
-- [ ] `my_calendar_i` · Medium · `./dsa test 20/my_calendar_i`
+- [ ] `my_calendar_i` · Medium · `./dsa test 20/my_calendar_i` · ⭐ interview priority
 
 ## CLRS quick reference (≈40 min, all optional)
 Fenwick trees and segment trees are not in CLRS; the rows below cover the related augmented-tree ideas.

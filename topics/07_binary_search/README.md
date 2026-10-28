@@ -16,11 +16,12 @@ Attempt cold (≤ 40 min each): `koko_bananas`, `search_rotated`. Both comfortab
 - [ ] `bounds`: `lowerBound` and `upperBound`, iterative, with the loop invariant written as a comment · `./dsa test 07/bounds`
 
 ## Practice
+⭐ = interview priority: do these first if you're short on time.
 - [ ] `binary_search` · Easy · `./dsa test 07/binary_search`
 - [ ] `search_2d_matrix` · Medium · `./dsa test 07/search_2d_matrix`
-- [ ] `koko_bananas` · Medium · `./dsa test 07/koko_bananas`
-- [ ] `find_min_rotated` · Medium · `./dsa test 07/find_min_rotated`
-- [ ] `search_rotated` · Medium · `./dsa test 07/search_rotated`
+- [ ] `koko_bananas` · Medium · `./dsa test 07/koko_bananas` · ⭐ interview priority
+- [ ] `find_min_rotated` · Medium · `./dsa test 07/find_min_rotated` · ⭐ interview priority
+- [ ] `search_rotated` · Medium · `./dsa test 07/search_rotated` · ⭐ interview priority
 - [ ] `time_map` · Medium · `./dsa test 07/time_map`
 - [ ] `median_two_sorted` · Hard · `./dsa test 07/median_two_sorted`
 

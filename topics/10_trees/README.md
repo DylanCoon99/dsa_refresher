@@ -18,14 +18,15 @@ Attempt cold (≤ 40 min each): `validate_bst`, `build_tree_pre_in`. Both comfor
 - [ ] `bst`: a `BST` class with insert, contains, erase (0-, 1- and 2-child cases) and inorder · `./dsa test 10/bst`
 
 ## Practice
+⭐ = interview priority: do these first if you're short on time.
 - [ ] `invert_tree` · Easy · `./dsa test 10/invert_tree`
 - [ ] `max_depth` · Easy · `./dsa test 10/max_depth`
 - [ ] `diameter` · Easy · `./dsa test 10/diameter`
 - [ ] `same_tree` · Easy · `./dsa test 10/same_tree`
 - [ ] `subtree` · Easy · `./dsa test 10/subtree`
-- [ ] `lca_bst` · Medium · `./dsa test 10/lca_bst`
-- [ ] `level_order` · Medium · `./dsa test 10/level_order`
-- [ ] `validate_bst` · Medium · `./dsa test 10/validate_bst`
+- [ ] `lca_bst` · Medium · `./dsa test 10/lca_bst` · ⭐ interview priority
+- [ ] `level_order` · Medium · `./dsa test 10/level_order` · ⭐ interview priority
+- [ ] `validate_bst` · Medium · `./dsa test 10/validate_bst` · ⭐ interview priority
 - [ ] `kth_smallest_bst` · Medium · `./dsa test 10/kth_smallest_bst`
 - [ ] `build_tree_pre_in` · Medium · `./dsa test 10/build_tree_pre_in`
 - [ ] `max_path_sum` · Hard · `./dsa test 10/max_path_sum`

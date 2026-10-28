@@ -15,12 +15,13 @@ Attempt cold (≤ 40 min each): `combination_sum_ii`, `word_search`. Both comfor
 - [ ] `backtracking_templates`: generic templates for generating subsets, permutations, and combinations · `./dsa test 15/backtracking_templates`
 
 ## Practice
-- [ ] `subsets` · Medium · `./dsa test 15/subsets`
+⭐ = interview priority: do these first if you're short on time.
+- [ ] `subsets` · Medium · `./dsa test 15/subsets` · ⭐ interview priority
 - [ ] `subsets_ii` · Medium · `./dsa test 15/subsets_ii`
 - [ ] `permutations` · Medium · `./dsa test 15/permutations`
-- [ ] `combination_sum` · Medium · `./dsa test 15/combination_sum`
+- [ ] `combination_sum` · Medium · `./dsa test 15/combination_sum` · ⭐ interview priority
 - [ ] `combination_sum_ii` · Medium · `./dsa test 15/combination_sum_ii`
-- [ ] `word_search` · Medium · `./dsa test 15/word_search`
+- [ ] `word_search` · Medium · `./dsa test 15/word_search` · ⭐ interview priority
 - [ ] `palindrome_partitioning` · Medium · `./dsa test 15/palindrome_partitioning`
 - [ ] `n_queens` · Hard · `./dsa test 15/n_queens`
 

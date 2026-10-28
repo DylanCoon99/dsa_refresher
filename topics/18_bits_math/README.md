@@ -22,9 +22,10 @@ Attempt cold (≤ 40 min each): `counting_bits`, `sum_two_integers`. Both comfor
 - [ ] `sieve`: the Sieve of Eratosthenes · `./dsa test 18/sieve`
 
 ## Practice
-- [ ] `single_number` · Easy · `./dsa test 18/single_number`
+⭐ = interview priority: do these first if you're short on time.
+- [ ] `single_number` · Easy · `./dsa test 18/single_number` · ⭐ interview priority
 - [ ] `hamming_weight` · Easy · `./dsa test 18/hamming_weight`
-- [ ] `counting_bits` · Easy · `./dsa test 18/counting_bits`
+- [ ] `counting_bits` · Easy · `./dsa test 18/counting_bits` · ⭐ interview priority
 - [ ] `missing_number` · Easy · `./dsa test 18/missing_number`
 - [ ] `reverse_bits` · Easy · `./dsa test 18/reverse_bits`
 - [ ] `sum_two_integers` · Medium · `./dsa test 18/sum_two_integers`

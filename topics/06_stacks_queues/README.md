@@ -16,12 +16,13 @@ Attempt cold (≤ 40 min each): `daily_temperatures`, `eval_rpn`. Both comfortab
 - [ ] `min_stack`: a stack that reports its minimum in O(1) (also a Practice problem below) · `./dsa test 06/min_stack`
 
 ## Practice
-- [ ] `valid_parentheses` · Easy · `./dsa test 06/valid_parentheses`
+⭐ = interview priority: do these first if you're short on time.
+- [ ] `valid_parentheses` · Easy · `./dsa test 06/valid_parentheses` · ⭐ interview priority
 - [ ] `min_stack` · Medium · `./dsa test 06/min_stack`
 - [ ] `eval_rpn` · Medium · `./dsa test 06/eval_rpn`
-- [ ] `daily_temperatures` · Medium · `./dsa test 06/daily_temperatures`
+- [ ] `daily_temperatures` · Medium · `./dsa test 06/daily_temperatures` · ⭐ interview priority
 - [ ] `car_fleet` · Medium · `./dsa test 06/car_fleet`
-- [ ] `largest_rectangle_histogram` · Hard · `./dsa test 06/largest_rectangle_histogram`
+- [ ] `largest_rectangle_histogram` · Hard · `./dsa test 06/largest_rectangle_histogram` · ⭐ interview priority
 
 ## CLRS quick reference (≈25 min, all optional)
 | When | Read (3e / 4e) | What to read | Skip if |

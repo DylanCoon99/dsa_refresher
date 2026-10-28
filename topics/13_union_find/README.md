@@ -15,9 +15,10 @@ Attempt cold (≤ 40 min each): `redundant_connection`, `accounts_merge`. Both c
 - [ ] `union_find`: union-find with path compression and union by rank or size · `./dsa test 13/union_find`
 
 ## Practice
+⭐ = interview priority: do these first if you're short on time.
 - [ ] `count_components` · Medium · `./dsa test 13/count_components`
-- [ ] `redundant_connection` · Medium · `./dsa test 13/redundant_connection`
-- [ ] `accounts_merge` · Medium · `./dsa test 13/accounts_merge`
+- [ ] `redundant_connection` · Medium · `./dsa test 13/redundant_connection` · ⭐ interview priority
+- [ ] `accounts_merge` · Medium · `./dsa test 13/accounts_merge` · ⭐ interview priority
 - [ ] `number_of_provinces` · Medium · `./dsa test 13/number_of_provinces`
 
 ## CLRS quick reference (≈25 min, all optional)

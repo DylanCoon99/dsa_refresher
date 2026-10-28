@@ -17,10 +17,11 @@ Attempt cold (≤ 40 min each): `longest_palindromic_substring`, `strstr_kmp`. B
 - [ ] `rolling_hash`: a polynomial rolling hash with O(1) substring queries · `./dsa test 21/rolling_hash`
 
 ## Practice
+⭐ = interview priority: do these first if you're short on time.
 - [ ] `strstr_kmp` · Easy · `./dsa test 21/strstr_kmp`
 - [ ] `repeated_string_match` · Medium · `./dsa test 21/repeated_string_match`
-- [ ] `longest_palindromic_substring` · Medium · `./dsa test 21/longest_palindromic_substring`
-- [ ] `palindromic_substrings` · Medium · `./dsa test 21/palindromic_substrings`
+- [ ] `longest_palindromic_substring` · Medium · `./dsa test 21/longest_palindromic_substring` · ⭐ interview priority
+- [ ] `palindromic_substrings` · Medium · `./dsa test 21/palindromic_substrings` · ⭐ interview priority
 - [ ] `longest_duplicate_substring` · Hard · `./dsa test 21/longest_duplicate_substring`
 
 ## CLRS quick reference (≈40 min, all optional)

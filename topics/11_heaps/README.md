@@ -17,11 +17,12 @@ Attempt cold (≤ 40 min each): `k_closest_points`, `median_finder`. Both comfor
 - [ ] `min_heap`: an array-backed binary min-heap with push, pop, top and an O(n) heapify constructor · `./dsa test 11/min_heap`
 
 ## Practice
+⭐ = interview priority: do these first if you're short on time.
 - [ ] `kth_largest_stream` · Easy · `./dsa test 11/kth_largest_stream`
 - [ ] `last_stone_weight` · Easy · `./dsa test 11/last_stone_weight`
-- [ ] `k_closest_points` · Medium · `./dsa test 11/k_closest_points`
+- [ ] `k_closest_points` · Medium · `./dsa test 11/k_closest_points` · ⭐ interview priority
 - [ ] `task_scheduler` · Medium · `./dsa test 11/task_scheduler`
-- [ ] `median_finder` · Hard · `./dsa test 11/median_finder`
+- [ ] `median_finder` · Hard · `./dsa test 11/median_finder` · ⭐ interview priority
 
 ## CLRS quick reference (≈30 min, all optional)
 | When | Read (3e / 4e) | What to read | Skip if |

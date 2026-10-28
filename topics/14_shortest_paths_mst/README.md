@@ -16,9 +16,10 @@ Attempt cold (≤ 40 min each): `network_delay`, `cheapest_flights_k_stops`. Bot
 - [ ] `kruskal`: Kruskal's algorithm using the union-find structure from Topic 13 · `./dsa test 14/kruskal`
 
 ## Practice
-- [ ] `network_delay` · Medium · `./dsa test 14/network_delay`
+⭐ = interview priority: do these first if you're short on time.
+- [ ] `network_delay` · Medium · `./dsa test 14/network_delay` · ⭐ interview priority
 - [ ] `min_effort_path` · Medium · `./dsa test 14/min_effort_path`
-- [ ] `cheapest_flights_k_stops` · Medium · `./dsa test 14/cheapest_flights_k_stops`
+- [ ] `cheapest_flights_k_stops` · Medium · `./dsa test 14/cheapest_flights_k_stops` · ⭐ interview priority
 - [ ] `min_cost_connect_points` · Medium · `./dsa test 14/min_cost_connect_points`
 - [ ] `swim_rising_water` · Hard · `./dsa test 14/swim_rising_water`
 

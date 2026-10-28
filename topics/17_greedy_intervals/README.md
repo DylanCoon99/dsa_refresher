@@ -14,19 +14,20 @@ Attempt cold (≤ 40 min each): `non_overlapping_intervals`, `gas_station`. Both
 - [ ] Interval problems: sorting by start or end; merging; removing overlaps; counting the maximum concurrent intervals (sweep line, or a min-heap of end times).
 
 ## Implement
-- [ ] `merge_intervals`: an interval-merging routine (same exercise as under Practice) · `./dsa test 17/merge_intervals`
+- [ ] `merge_intervals`: an interval-merging routine (same exercise as under Practice) · `./dsa test 17/merge_intervals` · ⭐ interview priority
 - [ ] `max_overlap`: a sweep-line computation of maximum overlap · `./dsa test 17/max_overlap`
 
 ## Practice
-- [ ] `jump_game` · Medium · `./dsa test 17/jump_game`
+⭐ = interview priority: do these first if you're short on time.
+- [ ] `jump_game` · Medium · `./dsa test 17/jump_game` · ⭐ interview priority
 - [ ] `jump_game_ii` · Medium · `./dsa test 17/jump_game_ii`
 - [ ] `gas_station` · Medium · `./dsa test 17/gas_station`
 - [ ] `partition_labels` · Medium · `./dsa test 17/partition_labels`
-- [ ] `merge_intervals` · Medium · `./dsa test 17/merge_intervals` (same exercise as under Implement)
+- [ ] `merge_intervals` · Medium · `./dsa test 17/merge_intervals` (same exercise as under Implement) · ⭐ interview priority
 - [ ] `insert_interval` · Medium · `./dsa test 17/insert_interval`
 - [ ] `non_overlapping_intervals` · Medium · `./dsa test 17/non_overlapping_intervals`
 - [ ] `min_arrows` · Medium · `./dsa test 17/min_arrows`
-- [ ] `meeting_rooms_ii` · Medium · `./dsa test 17/meeting_rooms_ii` (a premium problem on LeetCode; `car_pooling` is the free alternative)
+- [ ] `meeting_rooms_ii` · Medium · `./dsa test 17/meeting_rooms_ii` (a premium problem on LeetCode; `car_pooling` is the free alternative) · ⭐ interview priority
 - [ ] `car_pooling` · Medium · `./dsa test 17/car_pooling`
 
 ## CLRS quick reference (≈50 min, all optional)

@@ -16,10 +16,11 @@ Attempt cold (≤ 40 min each): `eventual_safe_states`, `reconstruct_itinerary`.
 - [ ] `tarjan_bridges_ap`: Tarjan's algorithm for bridges, plus articulation points · `./dsa test 22/tarjan_bridges_ap`
 
 ## Practice
-- [ ] `critical_connections` · Hard · `./dsa test 22/critical_connections`
+⭐ = interview priority: do these first if you're short on time.
+- [ ] `critical_connections` · Hard · `./dsa test 22/critical_connections` · ⭐ interview priority
 - [ ] `eventual_safe_states` · Medium · `./dsa test 22/eventual_safe_states`
 - [ ] `reconstruct_itinerary` · Hard · `./dsa test 22/reconstruct_itinerary`
-- [ ] `alien_dictionary` · Hard · `./dsa test 22/alien_dictionary` (a premium problem, written here in original words)
+- [ ] `alien_dictionary` · Hard · `./dsa test 22/alien_dictionary` (a premium problem, written here in original words) · ⭐ interview priority
 
 ## CLRS quick reference (≈90 min, all optional)
 A* is not in CLRS. Strongly connected components, max flow and matching have no exercises here; they are review reading only.

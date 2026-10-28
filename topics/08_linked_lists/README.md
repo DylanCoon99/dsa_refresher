@@ -14,17 +14,18 @@ Attempt cold (≤ 40 min each): `reorder_list`, `remove_nth_from_end`. Both comf
 
 ## Implement
 - [ ] `doubly_linked_list`: a doubly linked list with sentinel nodes · `./dsa test 08/doubly_linked_list`
-- [ ] `lru_cache`: an LRU cache with O(1) `get` and `put` (also a Practice problem below) · `./dsa test 08/lru_cache`
+- [ ] `lru_cache`: an LRU cache with O(1) `get` and `put` (also a Practice problem below) · `./dsa test 08/lru_cache` · ⭐ interview priority
 
 ## Practice
-- [ ] `reverse_linked_list` · Easy · `./dsa test 08/reverse_linked_list`
+⭐ = interview priority: do these first if you're short on time.
+- [ ] `reverse_linked_list` · Easy · `./dsa test 08/reverse_linked_list` · ⭐ interview priority
 - [ ] `merge_two_lists` · Easy · `./dsa test 08/merge_two_lists`
 - [ ] `linked_list_cycle` · Easy · `./dsa test 08/linked_list_cycle`
 - [ ] `reorder_list` · Medium · `./dsa test 08/reorder_list`
 - [ ] `remove_nth_from_end` · Medium · `./dsa test 08/remove_nth_from_end`
 - [ ] `copy_random_list` · Medium · `./dsa test 08/copy_random_list`
-- [ ] `lru_cache` · Medium · `./dsa test 08/lru_cache`
-- [ ] `merge_k_lists` · Hard · `./dsa test 08/merge_k_lists`
+- [ ] `lru_cache` · Medium · `./dsa test 08/lru_cache` · ⭐ interview priority
+- [ ] `merge_k_lists` · Hard · `./dsa test 08/merge_k_lists` · ⭐ interview priority
 
 ## CLRS quick reference (≈35 min, all optional)
 | When | Read (3e / 4e) | What to read | Skip if |

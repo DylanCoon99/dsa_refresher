@@ -13,11 +13,12 @@ Attempt cold (≤ 40 min each): `longest_substring_no_repeat`, `char_replacement
 - [ ] `window_template`: a reusable variable-window template that maintains a frequency map · `./dsa test 04/window_template`
 
 ## Practice
+⭐ = interview priority: do these first if you're short on time.
 - [x] `best_time_stock` · Easy · `./dsa test 04/best_time_stock`
-- [x] `longest_substring_no_repeat` · Medium · `./dsa test 04/longest_substring_no_repeat`
-- [x] `char_replacement` · Medium · `./dsa test 04/char_replacement`
+- [x] `longest_substring_no_repeat` · Medium · `./dsa test 04/longest_substring_no_repeat` · ⭐ interview priority
+- [x] `char_replacement` · Medium · `./dsa test 04/char_replacement` · ⭐ interview priority
 - [ ] `permutation_in_string` · Medium · `./dsa test 04/permutation_in_string`
-- [ ] `min_window_substring` · Hard · `./dsa test 04/min_window_substring`
+- [ ] `min_window_substring` · Hard · `./dsa test 04/min_window_substring` · ⭐ interview priority
 - [ ] `sliding_window_max` · Hard · `./dsa test 04/sliding_window_max`
 
 ## CLRS quick reference

@@ -20,12 +20,13 @@ Attempt cold (≤ 40 min each): `rotting_oranges`, `course_schedule_ii`. Both co
 - [ ] `kahn_topo`: Kahn's topological sort, empty result on a cycle · `./dsa test 12/kahn_topo`
 
 ## Practice
-- [ ] `num_islands` · Medium · `./dsa test 12/num_islands`
+⭐ = interview priority: do these first if you're short on time.
+- [ ] `num_islands` · Medium · `./dsa test 12/num_islands` · ⭐ interview priority
 - [ ] `max_area_island` · Medium · `./dsa test 12/max_area_island`
 - [ ] `clone_graph` · Medium · `./dsa test 12/clone_graph`
-- [ ] `rotting_oranges` · Medium · `./dsa test 12/rotting_oranges`
+- [ ] `rotting_oranges` · Medium · `./dsa test 12/rotting_oranges` · ⭐ interview priority
 - [ ] `pacific_atlantic` · Medium · `./dsa test 12/pacific_atlantic`
-- [ ] `course_schedule` · Medium · `./dsa test 12/course_schedule`
+- [ ] `course_schedule` · Medium · `./dsa test 12/course_schedule` · ⭐ interview priority
 - [ ] `course_schedule_ii` · Medium · `./dsa test 12/course_schedule_ii`
 - [ ] `is_bipartite` · Medium · `./dsa test 12/is_bipartite`
 - [ ] `word_ladder` · Hard · `./dsa test 12/word_ladder`
