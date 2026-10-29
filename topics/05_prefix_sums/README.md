@@ -16,7 +16,7 @@ Attempt cold (≤ 40 min each): `subarray_sum_k`, `range_sum_query_2d`. Both com
 ⭐ = interview priority: do these first if you're short on time.
 - [ ] `range_sum_query` · Easy · `./dsa test 05/range_sum_query`
 - [ ] `range_sum_query_2d` · Medium · `./dsa test 05/range_sum_query_2d`
-- [ ] `subarray_sum_k` · Medium · `./dsa test 05/subarray_sum_k` · ⭐ interview priority
+- [x] `subarray_sum_k` · Medium · `./dsa test 05/subarray_sum_k` · ⭐ interview priority
 - [ ] `continuous_subarray_sum` · Medium · `./dsa test 05/continuous_subarray_sum` · ⭐ interview priority
 - [ ] `corporate_flight_bookings` · Medium · `./dsa test 05/corporate_flight_bookings`
 
