@@ -14,7 +14,7 @@ Attempt cold (≤ 40 min each): `reorder_list`, `remove_nth_from_end`. Both comf
 
 ## Implement
 - [ ] `doubly_linked_list`: a doubly linked list with sentinel nodes · `./dsa test 08/doubly_linked_list`
-- [ ] `lru_cache`: an LRU cache with O(1) `get` and `put` (also a Practice problem below) · `./dsa test 08/lru_cache` · ⭐ interview priority
+- [x] `lru_cache`: an LRU cache with O(1) `get` and `put` (also a Practice problem below) · `./dsa test 08/lru_cache` · ⭐ interview priority
 
 ## Practice
 ⭐ = interview priority: do these first if you're short on time.
@@ -24,7 +24,7 @@ Attempt cold (≤ 40 min each): `reorder_list`, `remove_nth_from_end`. Both comf
 - [ ] `reorder_list` · Medium · `./dsa test 08/reorder_list`
 - [ ] `remove_nth_from_end` · Medium · `./dsa test 08/remove_nth_from_end`
 - [ ] `copy_random_list` · Medium · `./dsa test 08/copy_random_list`
-- [ ] `lru_cache` · Medium · `./dsa test 08/lru_cache` · ⭐ interview priority
+- [x] `lru_cache` · Medium · `./dsa test 08/lru_cache` · ⭐ interview priority
 - [ ] `merge_k_lists` · Hard · `./dsa test 08/merge_k_lists` · ⭐ interview priority
 
 ## CLRS quick reference (≈35 min, all optional)

@@ -19,7 +19,7 @@ inline ListNode* reverseList(ListNode* head) {
     while (current) {
         next = current->next;
         current->next = prev;
-        prev = current;
+        prev = current
         current = next;
     }
 
