@@ -18,7 +18,7 @@ Attempt cold (≤ 40 min each): `reorder_list`, `remove_nth_from_end`. Both comf
 
 ## Practice
 ⭐ = interview priority: do these first if you're short on time.
-- [ ] `reverse_linked_list` · Easy · `./dsa test 08/reverse_linked_list` · ⭐ interview priority
+- [x] `reverse_linked_list` · Easy · `./dsa test 08/reverse_linked_list` · ⭐ interview priority
 - [ ] `merge_two_lists` · Easy · `./dsa test 08/merge_two_lists`
 - [ ] `linked_list_cycle` · Easy · `./dsa test 08/linked_list_cycle`
 - [ ] `reorder_list` · Medium · `./dsa test 08/reorder_list`
