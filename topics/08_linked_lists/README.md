@@ -25,7 +25,7 @@ Attempt cold (≤ 40 min each): `reorder_list`, `remove_nth_from_end`. Both comf
 - [ ] `remove_nth_from_end` · Medium · `./dsa test 08/remove_nth_from_end`
 - [ ] `copy_random_list` · Medium · `./dsa test 08/copy_random_list`
 - [x] `lru_cache` · Medium · `./dsa test 08/lru_cache` · ⭐ interview priority
-- [ ] `merge_k_lists` · Hard · `./dsa test 08/merge_k_lists` · ⭐ interview priority
+- [x] `merge_k_lists` · Hard · `./dsa test 08/merge_k_lists` · ⭐ interview priority
 
 ## CLRS quick reference (≈35 min, all optional)
 | When | Read (3e / 4e) | What to read | Skip if |
