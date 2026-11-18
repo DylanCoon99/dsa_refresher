@@ -17,7 +17,7 @@ Attempt cold (≤ 40 min each): `daily_temperatures`, `eval_rpn`. Both comfortab
 
 ## Practice
 ⭐ = interview priority: do these first if you're short on time.
-- [ ] `valid_parentheses` · Easy · `./dsa test 06/valid_parentheses` · ⭐ interview priority
+- [x] `valid_parentheses` · Easy · `./dsa test 06/valid_parentheses` · ⭐ interview priority
 - [ ] `min_stack` · Medium · `./dsa test 06/min_stack`
 - [ ] `eval_rpn` · Medium · `./dsa test 06/eval_rpn`
 - [ ] `daily_temperatures` · Medium · `./dsa test 06/daily_temperatures` · ⭐ interview priority
