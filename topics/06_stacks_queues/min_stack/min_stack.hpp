@@ -7,19 +7,34 @@ class MinStack {
 public:
     void push(int val) {
         // TODO: implement
+        data_.push_back(val);
+
+        if (min_.empty()) {
+            min_.push_back(val);
+        } else {
+            if (min_.back() > val) {
+                min_.push_back(val);
+            } else {
+                min_.push_back(min_.back());
+            }
+        }
     }
     void pop() {
         // TODO: implement
+        data_.pop_back();
+        min_.pop_back();
     }
     int top() const {
         // TODO: implement
-        return 0;
+        return data_.back();
     }
     int getMin() const {
         // TODO: implement
-        return 0;
+        return min_.back();
     }
 
 private:
     std::vector<int> data_;
+    std::vector<int> min_; // holds the min at each element of the stack, when an element of the stack is popped, pop from here as well
+
 };

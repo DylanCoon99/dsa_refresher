@@ -13,12 +13,12 @@ Attempt cold (≤ 40 min each): `daily_temperatures`, `eval_rpn`. Both comfortab
 
 ## Implement
 - [ ] `queue_two_stacks`: a FIFO queue built from two stacks, with an amortized O(1) analysis · `./dsa test 06/queue_two_stacks`
-- [ ] `min_stack`: a stack that reports its minimum in O(1) (also a Practice problem below) · `./dsa test 06/min_stack`
+- [x] `min_stack`: a stack that reports its minimum in O(1) (also a Practice problem below) · `./dsa test 06/min_stack`
 
 ## Practice
 ⭐ = interview priority: do these first if you're short on time.
 - [x] `valid_parentheses` · Easy · `./dsa test 06/valid_parentheses` · ⭐ interview priority
-- [ ] `min_stack` · Medium · `./dsa test 06/min_stack`
+- [x] `min_stack` · Medium · `./dsa test 06/min_stack`
 - [ ] `eval_rpn` · Medium · `./dsa test 06/eval_rpn`
 - [ ] `daily_temperatures` · Medium · `./dsa test 06/daily_temperatures` · ⭐ interview priority
 - [ ] `car_fleet` · Medium · `./dsa test 06/car_fleet`
