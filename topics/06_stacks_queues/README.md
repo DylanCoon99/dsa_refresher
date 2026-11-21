@@ -20,7 +20,7 @@ Attempt cold (≤ 40 min each): `daily_temperatures`, `eval_rpn`. Both comfortab
 - [x] `valid_parentheses` · Easy · `./dsa test 06/valid_parentheses` · ⭐ interview priority
 - [x] `min_stack` · Medium · `./dsa test 06/min_stack`
 - [x] `eval_rpn` · Medium · `./dsa test 06/eval_rpn`
-- [ ] `daily_temperatures` · Medium · `./dsa test 06/daily_temperatures` · ⭐ interview priority
+- [x] `daily_temperatures` · Medium · `./dsa test 06/daily_temperatures` · ⭐ interview priority
 - [ ] `car_fleet` · Medium · `./dsa test 06/car_fleet`
 - [ ] `largest_rectangle_histogram` · Hard · `./dsa test 06/largest_rectangle_histogram` · ⭐ interview priority
 
