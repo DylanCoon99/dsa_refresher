@@ -19,7 +19,7 @@ Attempt cold (≤ 40 min each): `validate_bst`, `build_tree_pre_in`. Both comfor
 
 ## Practice
 ⭐ = interview priority: do these first if you're short on time.
-- [ ] `invert_tree` · Easy · `./dsa test 10/invert_tree`
+- [x] `invert_tree` · Easy · `./dsa test 10/invert_tree`
 - [ ] `max_depth` · Easy · `./dsa test 10/max_depth`
 - [ ] `diameter` · Easy · `./dsa test 10/diameter`
 - [x] `same_tree` · Easy · `./dsa test 10/same_tree`
