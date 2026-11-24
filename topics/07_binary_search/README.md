@@ -17,7 +17,7 @@ Attempt cold (≤ 40 min each): `koko_bananas`, `search_rotated`. Both comfortab
 
 ## Practice
 ⭐ = interview priority: do these first if you're short on time.
-- [ ] `binary_search` · Easy · `./dsa test 07/binary_search`
+- [x] `binary_search` · Easy · `./dsa test 07/binary_search`
 - [ ] `search_2d_matrix` · Medium · `./dsa test 07/search_2d_matrix`
 - [ ] `koko_bananas` · Medium · `./dsa test 07/koko_bananas` · ⭐ interview priority
 - [ ] `find_min_rotated` · Medium · `./dsa test 07/find_min_rotated` · ⭐ interview priority

@@ -5,5 +5,12 @@
 // at the target counts as joining the fleet. Positions are distinct and < target; speeds > 0.
 inline int carFleet(int target, const std::vector<int>& position, const std::vector<int>& speed) {
     // TODO: implement
+
+    for (int i = 0; i < position.size(); ++i) {
+        
+    }
+
+
+
     return 0;
 }
