@@ -4,5 +4,17 @@
 // Mirror the tree (swap left and right at every node) and return its root. nullptr -> nullptr.
 inline TreeNode* invertTree(TreeNode* root) {
     // TODO: implement
-    return nullptr;
+    
+    if (!root) {
+        return nullptr;
+    } else {
+        TreeNode* temp = root->right;
+        root->right = root->left;
+        root->left = temp;
+        invertTree(root->left);
+        invertTree(root->right);
+    }
+
+    return root;
+
 }

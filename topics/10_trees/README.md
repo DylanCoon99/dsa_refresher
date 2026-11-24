@@ -22,7 +22,7 @@ Attempt cold (≤ 40 min each): `validate_bst`, `build_tree_pre_in`. Both comfor
 - [ ] `invert_tree` · Easy · `./dsa test 10/invert_tree`
 - [ ] `max_depth` · Easy · `./dsa test 10/max_depth`
 - [ ] `diameter` · Easy · `./dsa test 10/diameter`
-- [ ] `same_tree` · Easy · `./dsa test 10/same_tree`
+- [x] `same_tree` · Easy · `./dsa test 10/same_tree`
 - [ ] `subtree` · Easy · `./dsa test 10/subtree`
 - [ ] `lca_bst` · Medium · `./dsa test 10/lca_bst` · ⭐ interview priority
 - [ ] `level_order` · Medium · `./dsa test 10/level_order` · ⭐ interview priority
